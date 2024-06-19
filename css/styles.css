@@ -40,6 +40,12 @@ body {
     font-size: 1em;
 }
 
+.header-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-left: auto;
+}
+
 .hero {
     text-align: center;
     padding: 60px 0;
@@ -151,4 +157,49 @@ body {
     flex: 1 1 calc(20% - 20px);
     max-width: calc(20% - 20px);
     height: auto;
+}
+
+.videos {
+    padding: 60px 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.videos-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.video-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer {
+    padding: 60px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-contact, .footer-newsletter {
+    margin-bottom: 20px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.footer-newsletter button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #555;
 }
