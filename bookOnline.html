@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraft</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="WebCraft Logo">
+            <h1>WEBCRAFT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#book-online">Book Online</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>DESIGN STUDIO</h2>
+        <p>Creative Web Design</p>
+    </section>
+    
+    <section id="book-online">
+        <h2>Book Online</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="web-design">Web Design</option>
+                <option value="web-development">Web Development</option>
+                <option value="seo">SEO</option>
+            </select>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
