@@ -25,13 +25,13 @@
         <section class="booking-section">
             <h2>Book Online</h2>
             <p>Take the first step towards achieving your goals. Fill out the form below to book your session today.</p>
-            <form id="booking-form" class="booking-form">
+            <form id="booking-form" class="booking-form" onsubmit="handleBookingFormSubmit(event)">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-
+            
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-
+            
                 <label for="service">Service:</label>
                 <select id="service" name="service" required>
                     <option value="" disabled selected>Select a service</option>
@@ -42,13 +42,36 @@
                     <option value="tutorials">Online Tutorials (Technology)</option>
                     <option value="personal-trainer">Personal Trainer</option>
                 </select>
-
+            
                 <label for="date">Preferred Date:</label>
                 <input type="date" id="date" name="date" required>
-
+            
                 <button type="submit" class="btn-submit">Submit</button>
             </form>
+            
         </section>
     </main>
+
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", () => {
+          // Select the "Book Online" navigation link
+          const bookOnlineLink = document.querySelector('a[href="/index.html"]');
+      
+          if (bookOnlineLink) {
+            // Add a click event listener to the link
+            bookOnlineLink.addEventListener("click", (event) => {
+              // Prevent the default navigation
+              event.preventDefault();
+      
+              // Redirect to bookOnline.html
+              window.location.href = "index.html";
+            });
+          }
+        });
+      </script>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

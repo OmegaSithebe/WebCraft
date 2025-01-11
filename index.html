@@ -61,17 +61,23 @@
             <div class="container">
                 <h2 class="services-title">OUR SERVICES</h2>
                 <div class="services-list">
-                    <div class="service-item" style="background-image: url('images/website-maintenance.jpg');">
+                    <div class="service-item" 
+                        style="background-image: url('images/website-maintenance.jpg');" 
+                        onclick="showForm('Website Maintenance', 'R1140')">
                         <h3>Website Maintenance</h3>
                         <p>R1140</p>
                         <button>Book Now</button>
                     </div>
-                    <div class="service-item" style="background-image: url('images/WebDesignConsultation.jpg');">
+                    <div class="service-item" 
+                        style="background-image: url('images/WebDesignConsultation.jpg');" 
+                        onclick="showForm('Web Design Consultation', 'R1500')">
                         <h3>Web Design Consultation</h3>
                         <p>R1500</p>
                         <button>Book Now</button>
                     </div>
-                    <div class="service-item" style="background-image: url('images/SEOWorkshop.jpg');">
+                    <div class="service-item" 
+                        style="background-image: url('images/SEOWorkshop.jpg');" 
+                        onclick="showForm('SEO Workshop', 'R1500')">
                         <h3>SEO Workshop</h3>
                         <p>R1500</p>
                         <button>Book Now</button>
@@ -80,29 +86,58 @@
             </div>
         </section>
         
+        <!-- Modal Form -->
+        <div class="modal" id="serviceModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2 id="serviceTitle"></h2>
+                <p id="servicePrice"></p>
+                <form id="serviceForm" onsubmit="submitForm(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        
         <section class="connect">
             <div class="container">
                 <h2 class="connect-title">CONNECT WITH US</h2>
                 <div class="connect-gallery">
-                    <div class="connect-item">
-                        <img src="images/video_editing_03.jpg" alt="Sale">
+                    <div class="connect-item" onclick="showForm('Video Editing')">
+                        <img src="images/video_editing_03.jpg" alt="Video Editing">
                         <h3 class="connect-caption">Video Editing</h3>
                     </div>
-                    <div class="connect-item">
-                        <img src="images/webDesign.jpg" alt="Ring">
+                    <div class="connect-item" onclick="showForm('Web Design')">
+                        <img src="images/webDesign.jpg" alt="Web Design">
                         <h3 class="connect-caption">Web Design</h3>
                     </div>
-                    <div class="connect-item">
-                        <img src="images/onlineTutotials.png" alt="Person">
-                        <h3 class="connect-caption">Online Tutorials</h3>
+                    <div class="connect-item" onclick="showForm('Online Tutorials')">
+                        <img src="images/onlineTutotials.png" alt="Online Tutorials">
+                        <h3 class="connect-caption">Online Tutorials (Technology)</h3>
                     </div>
-                    <div class="connect-item">
-                        <img src="images/onlinePersonalTrainer.jpg" alt="Iceberg">
-                        <h3 class="connect-caption">Online Personal Trainer</h3>
+                    <div class="connect-item" onclick="showForm('Online Personal Trainer (Technology)')">
+                        <img src="images/onlinePersonalTrainer.jpg" alt="Online Personal Trainer">
+                        <h3 class="connect-caption">Online Personal Trainer </h3>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Modal Form -->
+        <div class="modal" id="connectModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2 id="serviceTitle"></h2>
+                <form id="serviceForm" onsubmit="submitForm(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>       
+        
         
         <section class="videos">
             <div class="container">
@@ -129,16 +164,17 @@
                     <p><i class="fas fa-map-marker-alt"></i> 4th Floor, The Firs, Rosebank, Johannesburg, 2194</p>
                 </div>
         
-                <!-- Contact Us Form -->
-                <div class="footer-form">
-                    <h2>Contact Us</h2>
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name *" required>
-                        <input type="email" name="email" placeholder="Your Email *" required>
-                        <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
+            <!-- Contact Us Form -->
+            <div class="footer-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <input type="text" name="name" placeholder="Your Name *" required>
+                    <input type="email" name="email" placeholder="Your Email *" required>
+                    <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
         
                 <!-- Social Media Links -->
                 <div class="footer-social">
@@ -164,8 +200,28 @@
             </div>
         </footer>
         
-        
     </main>
+
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", () => {
+          // Select the "Book Online" navigation link
+          const bookOnlineLink = document.querySelector('a[href="/bookOnline.html"]');
+      
+          if (bookOnlineLink) {
+            // Add a click event listener to the link
+            bookOnlineLink.addEventListener("click", (event) => {
+              // Prevent the default navigation
+              event.preventDefault();
+      
+              // Redirect to bookOnline.html
+              window.location.href = "bookOnline.html";
+            });
+          }
+        });
+      </script>
+      
     <script src="js/script.js"></script>
+
 </body>
 </html>

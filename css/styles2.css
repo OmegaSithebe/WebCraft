@@ -83,15 +83,16 @@ html {
 }
 
 .logo {
-    height: 60px;
+    height: 80px;
     width: auto;
     margin-right: 10px;
 }
 
 .site-title {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
-    color: white;
+    font-family: "Poppins";
+    color: rgb(212, 212, 212);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;

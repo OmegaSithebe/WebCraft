@@ -27,8 +27,83 @@ document.addEventListener('DOMContentLoaded', () => {
         const service = document.getElementById('service').value;
         const date = document.getElementById('date').value;
         
-        alert(`Booking confirmed for ${name} on ${date} for ${service}`);
         
         // Here, you can add code to send form data to your server
     });
 });
+
+
+// Our Services
+// Show the form modal
+function showForm(title, price) {
+    document.getElementById('serviceTitle').textContent = title;
+    document.getElementById('servicePrice').textContent = price;
+    document.getElementById('serviceModal').style.display = 'block';
+}
+
+// Close the form modal
+function closeForm() {
+    document.getElementById('serviceModal').style.display = 'none';
+}
+
+// Handle form submission
+function submitForm(event) {
+    event.preventDefault(); // Prevent the form from refreshing the page
+    alert(
+        "Sorry for the inconvenience, the site is under maintenance. Please write us an email and we'll get back to you. Thank you."
+    );
+    closeForm(); // Close the modal after the alert
+}
+
+// Connect with Us
+// Function to show the modal with the selected service details
+function showForm(serviceName) {
+    document.getElementById('serviceTitle').textContent = serviceName;
+    document.getElementById('connectModal').style.display = 'block';
+}
+
+// Function to close the modal
+function closeForm() {
+    document.getElementById('connectModal').style.display = 'none';
+}
+
+// Function to handle form submission
+function submitForm(event) {
+    event.preventDefault(); // Prevent the page from reloading
+    alert(
+        "Sorry for the inconvenience, the site is under maintenance. Please write us an email and we'll get back to you. Thank you."
+    );
+    closeForm(); // Close the modal after showing the alert
+}
+
+
+// Contact Us 
+// Function to handle the form submission
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Show the maintenance message
+    alert(
+        "Sorry for the inconvenience, the site is under maintenance. Please write us an email and we'll get back to you. Thank you."
+    );
+
+    // Reset the form fields
+    document.getElementById('contactForm').reset();
+}
+
+// Book Online
+// Function to handle booking form submission
+function handleBookingFormSubmit(event) {
+    event.preventDefault(); 
+
+    // Display the maintenance message
+    alert(
+        "Sorry for the inconvenience, the site is under maintenance. Please write us an email and we'll get back to you. Thank you."
+    );
+
+    // Reset the form fields
+    document.getElementById('booking-form').reset();
+}
+
+
+
