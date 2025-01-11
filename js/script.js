@@ -106,4 +106,40 @@ function handleBookingFormSubmit(event) {
 }
 
 
+// Change page from home
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", () => {
+            // Select the "Book Online" navigation link
+            const bookOnlineLink = document.querySelector('a[href="/bookOnline.html"]');
+        
+            if (bookOnlineLink) {
+              // Add a click event listener to the link
+              bookOnlineLink.addEventListener("click", (event) => {
+                // Prevent the default navigation
+                event.preventDefault();
+        
+                // Redirect to bookOnline.html
+                window.location.href = "bookOnline.html";
+              });
+            }
+          });
 
+
+
+// Change page from book online
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", () => {
+            // Select the "Book Online" navigation link
+            const bookOnlineLink = document.querySelector('a[href="/index.html"]');
+        
+            if (bookOnlineLink) {
+              // Add a click event listener to the link
+              bookOnlineLink.addEventListener("click", (event) => {
+                // Prevent the default navigation
+                event.preventDefault();
+        
+                // Redirect to bookOnline.html
+                window.location.href = "index.html";
+              });
+            }
+          });
