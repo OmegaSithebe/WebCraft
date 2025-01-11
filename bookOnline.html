@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCraft</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>WebCraft - Book Online</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="WebCraft Logo">
-            <h1>WEBCRAFT</h1>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/WebCraft-Logo.png" alt="WebCraft Logo" class="logo">
+            <h1 class="site-title">WEBCRAFT</h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#book-online">Book Online</a></li>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/bookOnline.html">Book Online</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="home">
-        <h2>DESIGN STUDIO</h2>
-        <p>Creative Web Design</p>
-    </section>
-    
-    <section id="book-online">
-        <h2>Book Online</h2>
-        <form id="booking-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="service">Service:</label>
-            <select id="service" name="service" required>
-                <option value="web-design">Web Design</option>
-                <option value="web-development">Web Development</option>
-                <option value="seo">SEO</option>
-            </select>
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <script src="script.js"></script>
+
+    <main>
+        <section class="booking-section">
+            <h2>Book Online</h2>
+            <p>Take the first step towards achieving your goals. Fill out the form below to book your session today.</p>
+            <form id="booking-form" class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="web-design">Web Design</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="seo">SEO</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="tutorials">Online Tutorials (Technology)</option>
+                    <option value="personal-trainer">Personal Trainer</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

@@ -5,95 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Studio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">WEBCRAFT</h1>
-            <nav class="nav">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">Book Online</a>
-            </nav>
-            <img src="images/logo.png" alt="WebCraft Logo" class="header-logo">
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/WebCraft-Logo.png" alt="WebCraft Logo" class="logo">
+            <h1 class="site-title">WEBCRAFT</h1>
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/bookOnline.html">Book Online</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="hero">
             <div class="container">
                 <h2 class="title">DESIGN STUDIO</h2>
-                <img src="images/your-hero-image.jpg" alt="Design Studio" class="hero-image">
+                <img src="images/design-studio.png" alt="Design Studio" class="hero-image">
             </div>
         </section>
+
         <section class="portfolio">
             <div class="container">
                 <h2 class="portfolio-title">CREATIVE WEB DESIGN</h2>
                 <div class="portfolio-gallery">
-                    <img src="images/image1.jpg" alt="Project 1" class="portfolio-item">
-                    <img src="images/image2.jpg" alt="Project 2" class="portfolio-item">
-                    <!-- Add more images as needed -->
+                    <a href="https://technospeaksite.netlify.app/" target="_blank">
+                        <img src="images/technospeak.png" alt="Project 1" class="portfolio-item">
+                    </a>
+                    <a href="https://mbewegroup.co.za/" target="_blank">
+                        <img src="images/mbewe-groups.png" alt="Project 2" class="portfolio-item">
+                    </a>
+                    <a href="https://africantravelogue.co.za/" target="_blank">
+                        <img src="images/african-travelogue.png" alt="Project 3" class="portfolio-item">
+                    </a>
+                    <a href="https://www.chippexstravel.co.za/" target="_blank">
+                        <img src="images/chippex-travel.png" alt="Project 4" class="portfolio-item">
+                    </a>
+                    <a href="https://www.adamsonsecurityservices.co.za/" target="_blank">
+                        <img src="images/adamonson-security.png" alt="Project 5" class="portfolio-item">
+                    </a>
+                    <a href="https://linankosifoundation.co.za/" target="_blank">
+                        <img src="images/linankosifoundation.png" alt="Project 6" class="portfolio-item">
+                    </a>
+                    <a href="https://mahachiprojects.co.za/" target="_blank">
+                        <img src="images/mahachi-peojects.png" alt="Project 6" class="portfolio-item">
+                    </a>
                 </div>
             </div>
         </section>
+        
         <section class="services">
             <div class="container">
                 <h2 class="services-title">OUR SERVICES</h2>
                 <div class="services-list">
-                    <div class="service-item">
+                    <div class="service-item" style="background-image: url('images/website-maintenance.jpg');">
                         <h3>Website Maintenance</h3>
-                        <p>US$60</p>
+                        <p>R1140</p>
                         <button>Book Now</button>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item" style="background-image: url('images/WebDesignConsultation.jpg');">
                         <h3>Web Design Consultation</h3>
-                        <p>US$80</p>
+                        <p>R1500</p>
                         <button>Book Now</button>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item" style="background-image: url('images/SEOWorkshop.jpg');">
                         <h3>SEO Workshop</h3>
-                        <p>US$100</p>
+                        <p>R1500</p>
                         <button>Book Now</button>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section class="connect">
             <div class="container">
                 <h2 class="connect-title">CONNECT WITH US</h2>
                 <div class="connect-gallery">
-                    <img src="images/image3.jpg" alt="Sale" class="connect-item">
-                    <img src="images/image4.jpg" alt="Ring" class="connect-item">
-                    <img src="images/image5.jpg" alt="Person" class="connect-item">
-                    <img src="images/image6.jpg" alt="Iceberg" class="connect-item">
-                    <img src="images/image7.jpg" alt="Lake" class="connect-item">
+                    <div class="connect-item">
+                        <img src="images/video_editing_03.jpg" alt="Sale">
+                        <h3 class="connect-caption">Video Editing</h3>
+                    </div>
+                    <div class="connect-item">
+                        <img src="images/webDesign.jpg" alt="Ring">
+                        <h3 class="connect-caption">Web Design</h3>
+                    </div>
+                    <div class="connect-item">
+                        <img src="images/onlineTutotials.png" alt="Person">
+                        <h3 class="connect-caption">Online Tutorials</h3>
+                    </div>
+                    <div class="connect-item">
+                        <img src="images/onlinePersonalTrainer.jpg" alt="Iceberg">
+                        <h3 class="connect-caption">Online Personal Trainer</h3>
+                    </div>
                 </div>
             </div>
         </section>
+        
         <section class="videos">
             <div class="container">
                 <h2 class="videos-title">OUR VIDEOS</h2>
                 <div class="video-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                    <video width="560" height="315" controls>
+                        <source src="videos/WebDesignIntro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                <!-- Add more video items as needed -->
+                <div class="video-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=8c0vz2O3x-g" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
+        
         <footer class="footer">
             <div class="container">
+                <!-- Contact Information -->
                 <div class="footer-contact">
-                    <p>123-456-7890</p>
-                    <p>info@mysite.com</p>
-                    <p>500 Terry Francine Street, 6th Floor, San Francisco, CA 94158</p>
+                    <h2>Contact Information</h2>
+                    <p><i class="fas fa-phone-alt"></i> +27 60 674 9861</p>
+                    <p><i class="fas fa-envelope"></i> rogersithebe@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 4th Floor, The Firs, Rosebank, Johannesburg, 2194</p>
                 </div>
-                <div class="footer-newsletter">
-                    <h2>Subscribe to Our Newsletter</h2>
+        
+                <!-- Contact Us Form -->
+                <div class="footer-form">
+                    <h2>Contact Us</h2>
                     <form>
-                        <input type="email" placeholder="Enter your email *" required>
-                        <button type="submit">Join</button>
+                        <input type="text" name="name" placeholder="Your Name *" required>
+                        <input type="email" name="email" placeholder="Your Email *" required>
+                        <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
+                        <button type="submit">Send Message</button>
                     </form>
-                    <p>Thank You for Subscribing!</p>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <h2>Follow Us</h2>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+
+            <!-- Map -->
+            <div class="footer-map">
+                <h2>Find Us</h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57265.85766707269!2d27.7352351!3d-26.2851379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d75f1d32f1b%3A0x480a54b5ea45f0b7!2sNuma%20Technologies%20%7C%20Website%20Design%20%26%20Apps%20Johannesburg!5e0!3m2!1sen!2sza!4v1696989143888!5m2!1sen!2sza" 
+                    width="400" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </footer>
+        
+        
     </main>
     <script src="js/script.js"></script>
 </body>
