@@ -1,3 +1,13 @@
+// Navbar links
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for internal links
     const links = document.querySelectorAll('nav ul li a');
